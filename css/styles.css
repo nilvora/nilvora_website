@@ -22,8 +22,27 @@
 .contact-detail { margin: 0.45rem 0 0; }
 .contact-detail a { color: inherit; text-decoration: none; }
 
-/* Move the floating card to the left in RTL layout */
+
+/* Hero floating card positioning */
 [dir="rtl"] .hero-floating-card {
-    right: auto;
     left: 6%;
+    right: auto;
+    text-align: right;
+}
+
+[dir="ltr"] .hero-floating-card {
+    right: 6%;
+    left: auto;
+}
+
+@media (max-width: 760px) {
+    [dir="rtl"] .hero-floating-card {
+        left: 22px;
+        right: auto;
+    }
+
+    [dir="ltr"] .hero-floating-card {
+        right: 22px;
+        left: auto;
+    }
 }
